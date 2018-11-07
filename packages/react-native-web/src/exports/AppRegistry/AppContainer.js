@@ -12,6 +12,7 @@ import StyleSheet from '../StyleSheet';
 import View from '../View';
 import { any, node } from 'prop-types';
 import React, { Component, type ComponentType } from 'react';
+import Alert from '../Alert';
 
 type Context = {
   rootTag: any
@@ -65,6 +66,7 @@ export default class AppContainer extends Component<Props, State> {
     return (
       <View pointerEvents="box-none" style={styles.appContainer}>
         {innerView}
+        <Alert.AlertView />
       </View>
     );
   }
